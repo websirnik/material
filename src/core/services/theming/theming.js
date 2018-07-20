@@ -134,9 +134,26 @@ function detectDisabledThemes($mdThemingProvider) {
  * {{primary-contrast}} - Generates .md-hue-1, .md-hue-2, .md-hue-3 with configured contrast (ie. text) color shades set for each hue
  * {{primary-contrast-0.7}} - Apply 0.7 opacity to each of the above rules
  * {{primary-contrast-divider}} - Apply divider opacity to contrast color
- * {{background-default-contrast}} - Apply primary text color for contrasting with default background
- * {{background-50-contrast-icon}} - Apply contrast color for icon on background's shade 50 hue
  *
+ * Foreground expansion: Applies rgba to black/white foreground text
+ *
+ * Old Foreground Expressions:
+ * {{foreground-1}} - used for primary text
+ * {{foreground-2}} - used for secondary text/divider
+ * {{foreground-3}} - used for disabled text
+ * {{foreground-4}} - used for dividers
+ *
+ * New Foreground Expressions:
+ *
+ * Apply primary text color for contrasting with default background
+ *  {{background-default-contrast}} - default opacity
+ *  {{background-default-contrast-secondary}} - opacity for secondary text
+ *  {{background-default-contrast-hint}} - opacity for hints and placeholders
+ *  {{background-default-contrast-disabled}} - opacity for disabled text
+ *  {{background-default-contrast-divider}} - opacity for dividers
+ *
+ * Apply contrast color for specific shades
+ *  {{background-50-contrast-icon}} - Apply contrast color for icon on background's shade 50 hue
  */
 
 // In memory generated CSS rules; registered by theme.name
